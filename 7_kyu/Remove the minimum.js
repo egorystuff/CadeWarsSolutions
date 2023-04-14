@@ -13,6 +13,8 @@
 // * Input: [5,3,2,1,4], output = [5,3,2,4]
 // * Input: [2,2,1,2,1], output = [2,2,2,1]
 
+//solution 1
+
 function removeSmallest(numbers) {
   // return numbers.filter((e) => e != min);
   if (numbers.length === 0) return numbers;
@@ -23,4 +25,18 @@ function removeSmallest(numbers) {
 }
 
 let value = removeSmallest([2, 2, 1, 2, 1]);
+console.log(value);
+
+//solution 2
+
+function removeSmallest(numbers) {
+  if (!numbers.length) return numbers;
+
+  let min = numbers.findIndex((item) => item === Math.min(...numbers));
+  numbers.splice(min, 1);
+
+  return numbers;
+}
+
+value = removeSmallest([2, 2, 1, 2, 1]);
 console.log(value);
