@@ -7,6 +7,8 @@
 // setAlarm(false, false) -> false
 // setAlarm(true, false) -> true
 
+// solution 1
+
 function setAlarm(employed, vacation) {
   if (vacation === true) return false;
   if (employed === false) return false;
@@ -14,4 +16,12 @@ function setAlarm(employed, vacation) {
 }
 
 let value = setAlarm(true, false);
+console.log(value);
+
+// solution 2
+
+function setAlarm(employed, vacation) {
+  return employed && !vacation;
+}
+value = setAlarm(true, false);
 console.log(value);
