@@ -10,7 +10,7 @@ function compareNumbers(a, b) {
 }
 
 function sumArray(array) {
-  if (array === null || array === [] || array === undefined) return 0;
+  if (array === null || !Array.isArray(array) || array === undefined) return 0;
 
   const arr = array.sort(compareNumbers);
   arr.shift();
