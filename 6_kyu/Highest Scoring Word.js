@@ -28,10 +28,6 @@ function high(x) {
 
 	let index = res.indexOf(maxValue);
 	return arr[index];
-
-	// return arr[0].split('').length;
-
-	// return arr[0].charCodeAt() - 96;
 }
 
 let value = high('take me to semynak');
