@@ -28,8 +28,13 @@
 // If you are given an array with multiple answers, return the lowest correct index.
 
 function findEvenIndex(arr) {
+	const index = arr.length - 1;
+  if (arr.slice(1).reduce((a, b) => a + b, 0) === 0) return 0;
+	if (arr.slice(0, index).reduce((a, b) => a + b, 0) === 0) return index;
+	
+
 	for (let i = 1; i < arr.length - 1; i++) {
-		if (arr.slice(0, i).reduce((a, b) => a + b) === arr.slice(i + 1).reduce((a, b) => a + b)) {
+		if (arr.slice(0, i).reduce((a, b) => a + b, 0) === arr.slice(i + 1).reduce((a, b) => a + b, 0)) {
 			return i;
 		}
 	}
@@ -37,5 +42,5 @@ function findEvenIndex(arr) {
 	return -1;
 }
 
-let value = findEvenIndex([1, 2, 3, 4, 3, 2, 1]);
+let value = findEvenIndex([20, 10, 30, 10, 10, 15, 35]);
 console.log(value);
