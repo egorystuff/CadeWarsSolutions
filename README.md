@@ -1,2 +1,2 @@
 # CadeWarsSolutions
-JS training
+JavaScript, TypeScript training
