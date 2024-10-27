@@ -42,7 +42,7 @@ function solve(s) {
   let maxSum = 0;
   let currentSum = 0;
   for (let char of s) {
-    if (/[aeiouy]/i.test(char)) {
+    if (/[aeiou]/i.test(char)) {
       currentSum = 0;
     } else {
       currentSum += letterWeight[char];
